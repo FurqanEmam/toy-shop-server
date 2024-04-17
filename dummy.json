@@ -1,0 +1,56 @@
+[
+  {
+    "seller": "Toy Emporium",
+    "toy_name": "Remote Control Racing Car",
+    "sub_category": "RC Cars",
+    "price": 29.99,
+    "available_quantity": 50,
+    "description": "Experience the thrill of high-speed racing with this remote control car. It features realistic design and smooth controls, perfect for racing enthusiasts of all ages.",
+    "image_url": "https://m.media-amazon.com/images/I/81ajqkfkHjL.jpg"
+  },
+  {
+    "seller": "Playtime Paradise",
+    "toy_name": "Diecast Vintage Car Set",
+    "sub_category": "Diecast Cars",
+    "price": 19.99,
+    "available_quantity": 30,
+    "description": "Collectors and enthusiasts will love this set of vintage diecast cars. Each car is meticulously crafted with attention to detail, making it a perfect addition to any collection.",
+    "image_url": "https://www.paudimodel.com/wp-content/uploads/2020/08/20200820200938-817x321.png"
+  },
+  {
+    "seller": "KidZone Fun",
+    "toy_name": "Build-Your-Own Car Kit",
+    "sub_category": "Building Kits",
+    "price": 24.99,
+    "available_quantity": 20,
+    "description": "Let your creativity run wild with this build-your-own car kit. It includes all the parts and tools needed to assemble your own custom car, providing hours of fun and learning.",
+    "image_url": "https://s3.amazonaws.com/images.gearjunkie.com/uploads/2022/10/rolling-chassis.jpeg"
+  },
+  {
+    "seller": "Toy Haven",
+    "toy_name": "Pull Back Racing Cars",
+    "sub_category": "Miniature Cars",
+    "price": 12.99,
+    "available_quantity": 40,
+    "description": "These pull back racing cars are perfect for little racers. Simply pull them back and watch them zoom across the floor, providing endless entertainment.",
+    "image_url": "https://example.com/pull_back_car_image.jpg"
+  },
+  {
+    "seller": "Adventure Toys",
+    "toy_name": "Off-Road Adventure Truck",
+    "sub_category": "Off-Road Vehicles",
+    "price": 39.99,
+    "available_quantity": 25,
+    "description": "Conquer any terrain with this off-road adventure truck. Its rugged design and powerful motor make it capable of tackling even the toughest obstacles, providing hours of outdoor fun.",
+    "image_url": "https://example.com/off_road_truck_image.jpg"
+  },
+  {
+    "seller": "Speedy Toys",
+    "toy_name": "Formula 1 Racing Set",
+    "sub_category": "Racing Sets",
+    "price": 49.99,
+    "available_quantity": 15,
+    "description": "Experience the excitement of Formula 1 racing with this racing set. It includes everything you need to create your own racing circuit and compete against friends for the podium.",
+    "image_url": "https://example.com/formula_1_set_image.jpg"
+  }
+]
