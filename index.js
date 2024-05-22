@@ -39,7 +39,21 @@ async function run() {
     app.get("/products/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
+      const option = {
+        projection: { soldToyName: 1, price: 1, image_url: 1 },
+      };
       const result = await productsCollection.findOne(query);
+      res.send(result);
+    });
+
+    //sold toy info get
+    app.get("/newsoldtoy", async (req, res) => {
+      console.log(req.query);
+      let query = {};
+      if (req.query?.email) {
+        query = { email: req.query.email };
+      }
+      const result = await sellCollection.find(query).toArray();
       res.send(result);
     });
 
@@ -50,6 +64,16 @@ async function run() {
       const result = await sellCollection.insertOne(soldToy);
       res.send(result);
     });
+
+    //sold toy info delete
+    app.delete("/newsoldtoy/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await sellCollection.deleteOne(query);
+      res.send(result);
+    });
+
+    //sold toy info update
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
