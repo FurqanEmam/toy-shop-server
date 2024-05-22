@@ -75,6 +75,20 @@ async function run() {
 
     //sold toy info update
 
+    app.patch("/newsoldtoy/:id", async (req, res) => {
+      const updateSoldToy = req.body;
+      // console.log(updateSoldToy);
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const updateData = {
+        $set: {
+          status: updateSoldToy.status,
+        },
+      };
+      const result = await sellCollection.updateOne(filter, updateData);
+      res.send(result);
+    });
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
