@@ -58,7 +58,7 @@ async function run() {
       const user = req.body;
       console.log(user);
       const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
-        expiresIn: "1h",
+        expiresIn: "2h",
       });
       console.log(token);
       res.send({ token }); // sending token as object cuj single string cant be formatted in json
@@ -82,8 +82,12 @@ async function run() {
 
     //sold toy info get
     app.get("/newsoldtoy", verifyJWT, async (req, res) => {
-      console.log("verifying jwt done");
+      const decoded = req.decoded;
+      console.log("verifying jwt done", decoded);
       // console.log(req.headers.authorization);
+      if (decoded.email !== req.query.email) {
+        return res.status(403).send({ error: 1, message: "forbidden access" });
+      }
       let query = {};
       if (req.query?.email) {
         query = { email: req.query.email };
