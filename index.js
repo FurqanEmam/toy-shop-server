@@ -53,6 +53,9 @@ async function run() {
     // sell collection
     const sellCollection = client.db("toyShopDB").collection("sellData");
 
+    //blogs collection
+    const blogsCollection = client.db("toyShopDB").collection("blogs");
+
     // jwt
     app.post("/jwt", (req, res) => {
       const user = req.body;
@@ -62,6 +65,13 @@ async function run() {
       });
       console.log(token);
       res.send({ token }); // sending token as object cuj single string cant be formatted in json
+    });
+
+    //blogs get api
+    app.get("/blogs", async (req, res) => {
+      const cursor = blogsCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
     });
 
     app.get("/products", async (req, res) => {
