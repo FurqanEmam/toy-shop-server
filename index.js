@@ -114,6 +114,14 @@ async function run() {
       res.send(result);
     });
 
+    // add toy info post method
+    app.post("/products", async (req, res) => {
+      const newToy = req.body;
+      console.log(newToy);
+      const result = await productsCollection.insertOne(newToy);
+      res.send(result);
+    });
+
     //sold toy info delete
     app.delete("/newsoldtoy/:id", async (req, res) => {
       const id = req.params.id;
